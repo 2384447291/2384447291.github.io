@@ -1,82 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 一些标准初始化 --> 
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        .container {
-            padding: 20px;
-            margin-top: 20px;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            padding: 10px;
-        }
-    </style>
+    <meta name="keywords" content="Saurav Mukherjee, portfolio Saurav Mukherjee, Data Scientist,Web Developer, portfolio website, Saurav Mukherjee website, Founder CodeIN" />
+    <meta name="description" content="Welcome to Saurav's Portfolio. Passionate Web & App Developer. Freelancer Data Scientist Machine Learning Ethusiast." />
+    <!-- Custom CSS -->      <!-- 导入内部样式 -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font Awesome -->    <!-- 导入外部图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon初始化网页logo和名称 -->
+    <link id='favicon' rel="shortcut icon" href="./m_assests/logo_black.png" type="image/x-png">
+    <title> SLJ's personal website </title>
+     <!-- Favicon实现发送邮件代码，不需要 -->
+    <!-- <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("tKcnAF73jMw0tRWFB");
+   })();
+</script> -->
 </head>
-<body>
-    <header>
-        <h1>My Portfolio</h1>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-        <section id="home">
-            <h2>Welcome to My Portfolio</h2>
-            <p>This is a brief introduction to my professional and personal work.</p>
-        </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Here you can include information about your background, experience, and skills.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Highlight some of your key projects here. Include descriptions, images, and links if applicable.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Provide ways for potential clients or employers to contact you.</p>
-        </section>
+ <!-- 锁住鼠标右键 -->
+<body oncontextmenu="return false">
+
+
+<!-- 初始化引导栏 -->  
+<!-- navbar starts -->
+<!-- fas fa-bars是上面导入的库的一个类即响应按钮 -->
+<header>
+        <nav class="navbar">
+            <ul>
+            <!-- a class="active"保证当前被激活的是home -->
+            <li><a class="active" href="#home">Home</a></li>
+            <!-- 其余各自被连接到对应的板块 -->
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#blocks">Blog</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- 初始化引导栏 -->
+
+
+<!-- 主欢迎界面 -->
+<section class="home" id="home">
+<!-- 动态例子特效（包） -->
+    <div id="particles-js"></div>
+<!-- 欢迎文字 -->
+    <div class="content">
+    <h3>Welcome to<br/> my personal  <span>website</span></h3>
+    <p>i am into <span class="typing-text"></span></p>
     </div>
-    <footer>
-        <p>Copyright © 2024 Your Name</p>
-    </footer>
+<!-- logo -->
+    <div class="image">
+        <img draggable="false" class="tilt" src="./m_assests/logo_white.png" alt="">
+    </div>
+</section>
+<!-- 主欢迎界面 -->
+
+
+<!-- 腾讯的文字滑动 -->
+<section class="marquee-section">
+  <div class="marquee">
+    <div class="track left">
+      <span>Mechanical</span></h3>
+      <span>Electronic</span></h3>
+    </div>
+    <div class="track right">
+      <span>Algorithm</span></h3>
+      <span>Innovation</span></h3>
+    </div>
+  </div>
+</section>
+<!-- 腾讯的文字滑动 -->
+
+
+<!-- 大学四年经历 -->
+<section class="experience" id="experience">
+
+  <h2 class="heading"><i class="fa fa-graduation-cap"></i> Experience </h2>
+
+  <div class="timeline">
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Southern University of Science and Technology</h2>
+        </div>
+        <div class="desc">
+            <h3> first semester of my freshman year(F/1) </h3>
+            <p>Jun 2020 - Jan 2021</p>
+            <p> - Entering university for the first time, I quickly 
+              integrated into campus life and found myself adapting 
+              well. </p> 
+              <br>
+              - Thanks to my quick adaptation to the university learning pace, my GPA ranked 
+              in the top 20% of the entire school during my freshman year.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Robomaster</h2>
+        </div>
+        <div class="desc">
+            <h3> second semester of my freshman year(S/1) </h3>  
+            <p>Jan 2021 - Aug 2021</p>
+            <p> - At the end of the first semester, I was fortunate to learn about RoboMaster,
+               the national university-level robotics competition.
+               I was immediately captivated by it, which also led me to choose robotics engineering as my major.</p> 
+               <br> 
+              - At the same time, I joined the university's RoboMaster team, ARTINX. 
+              Within six months, thanks to the team's believing and teaching, I went from being a complete novice
+              to mastering electrical control and hardware design. Eventually, I took charge of controlling 
+              one of the main robots. We competed in the final national competition as a team and 
+              achieved satisfactory results, making it to the top 16 in the country.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Artinx</h2>
+        </div>
+        <div class="desc">
+            <h3> First semester of my sophomore year(F/2) </h3>  
+            <p>Aug 2021 - Jun 2022</p>
+            <p>- Due to the team's excellent performance last year,
+              many senior members chose to retire after achieving their goals.
+               For the sake of the team, I felt it was necessary for me to stay. More importantly, 
+               I felt that I didn't perform my best last year, which let the team down. To prove myself or to make amends, 
+               I decided to continue for another year.</p>
+              <br>
+              - Due to my lack of foundation, I diligently studied various subjects, including C++ programming, circuit design, 
+              data structures, and the basics of robotics. Additionally, I read and comprehended all existing electrical control 
+              codes within the team that year. To strengthen my foundation, 
+              I also took many courses outside the Major of robotics engineering during those two semesters.</p>
+              <br>
+              - However, due to the departure of key team members and technological setbacks, 
+              we were unable to achieve the desired results and did not advance to the national competition.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>The happiest project</h2>
+        </div>
+        <div class="desc">
+            <h3> First semester of my senior year(S/2) </h3>  
+            <p>Mar 2022 - Jun 2022</p>
+            <p>
+              - in the second semester of my second year, due to taking multiple courses, 
+              I had a pile-up of course projects. Considering time constraints, 
+              I plan to collaborate with another student specializing in mechanical design (a teammate from ARTINX) 
+              to complete a large-scale project that meets all course requirements.</p>
+            </br>
+            - After dividing tasks such as mechanical design, circuit control, and algorithm simulation with another classmate, 
+            we successfully completed a hexapod robot within one month. The robot is capable of autonomous walking and maintaining
+             its body level in various environments. Finally, we designed a poster, wrote a technical document, 
+             created an introduction video, and even filmed a short play featuring the robot as the main character.</p>
+            </br>
+            - This project received unanimous praise from all course instructors and was regarded as the most accomplished and challenging project.
+        </div>
+      </div>
+    </div>
+  
+
+  <div class="container left">
+    <div class="content">
+      <div class="tag">
+        <h2>Artinx(Comeback)</h2>
+      </div>
+      <div class="desc">
+          <h3> First semester of my junior year(F/3) </h3>  
+          <p>Jun 2022 - Jan 2023</p>
+          <p>- In the third semester, despite facing pressure to pursue further studies, 
+            I chose to continue dedicating myself fully for another year(we called it all in). 
+            This decision stemmed from both the team's need for me and my two years of experience. 
+            I undertook the significant responsibility of being the team's head of electrical control, 
+            striving to live up to this role. I expanded my knowledge by studying modern control theory, 
+            STM32 system architecture, and computer operating systems. Additionally, 
+            in preparation for the new year's electrical control training, 
+            I completed over 100,000 words of documentation and created more than 400 PowerPoint slides during the summer break. 
+            These materials covered embedded systems, communication protocols, basic C++ syntax, electromechanical systems, and more.</p>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Artinx(The perfect finale)</h2>
+        </div>
+        <div class="desc">
+            <h3> Second semester of my junior year(S/3) </h3>  
+            <p>Jan 2023 - Aug 2023</p>
+            <p>
+            - Looking back, it was an intense period where I barely slept, getting only 5 to 6 hours a night,
+               working tirelessly until exhaustion set in. I want to express my gratitude to my teammates and fate itself. 
+               In that year's national competition, ARTINX once again reached its peak, securing the 11th place nationwide.</p>
+            </br>
+            - Reflecting on my three years of experience, I participated in over 10 large-scale competitions, 
+            overseeing the circuit design and overall control of multiple robots. I was honored with 3 national-level awards 
+            and 4 provincial-level awards, gaining invaluable engineering experience and forging friendships with like-minded engineers. 
+            I am grateful to the ARTINX team and to RoboMaster.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>IrisTac(first experience with scientific research)</h2>
+        </div>
+        <div class="desc">
+            <h3> First semester of my senior year(F/4) </h3>  
+            <p>Aug 2023 - Dec 2023</p>
+            <p> - After concluding my RoboMaster journey, my accumulated engineering experience garnered recognition from professors, 
+              allowing me the privilege of swiftly entering the laboratory to participate in research projects. </p>
+            </br>
+            - I am grateful to my teachers and doctoral peers for their guidance, which enabled me to quickly grasp the research process 
+              and become involved in the tactile sensor project in the lab.
+               Research often hinges on innovative ideas, and after delving into a paper with my doctoral colleague for over a month, 
+               we identified a novel approach to enhance existing tactile sensors.</p>
+              </br>
+              - Drawing on my previous engineering experience, I adeptly crafted the sensor body. Under the guidance of my doctoral colleague, 
+               we swiftly iterated on the sensor body twice, encompassing both hardware and casing design.</p>
+            </br>
+            - Through corresponding experiments and algorithm design, we obtained some results. We documented the entire process into an academic paper, 
+            which was honored to be accepted at the international conference EECR.
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>The end of my university</h2>
+        </div>
+        <div class="desc">
+            <h3> Second semester of my senior year(S/4) </h3>  
+            <p>Dec 2023 - Jun 2024</p>
+            <p> 
+              - After four years of university study, I am about to graduate successfully. This period of time has not only earned me recognition from the school,
+               making me a recipient of the Outstanding Graduate Award at the university level, but also enabled me to forge friendships with a group of like-minded engineering peers. </p>
+              </br>- The experiences of these four years have been truly remarkable, so I plan to create a webpage to document it all. </p>
+              </br>- At the same time, I want to express my gratitude for your 
+               companionship up to this moment.
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</section>
+<!-- 大学四年经历 -->
+
+<!-- 项目经历 -->
+<section class="work" id="work">
+
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects 
+
+  <div class="box-container">
+
+    <div class="box tilt">
+      <img draggable="false" src="./m_assests/gelsight/gelsight.png" alt="" />
+      <div class="content">
+        <div class="tag">
+        <h3>IrisTac VBTS</h3>
+        </div>
+        <div class="desc">
+          <p>Designe an innovative vision-based tactile sensor   
+            </p>
+          <div class="btns">
+            <a href="/gelsight_project/index.html" class="btn" target="_blank"><i class="fas fa-eye"></i> Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="box tilt">
+      <img draggable="false" src="./assests/images/projects/portfolio1.jpg" alt="" />
+      <div class="content">
+        <div class="tag">
+        <h3>Portfolio Website</h3>
+        </div>
+        <div class="desc">
+          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
+          <div class="btns">
+            <a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/SauravMukherjee44/Portfolio-Saurav-Mukherjee" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="box tilt">
+      <img draggable="false" src="./assests/images/projects/Library.png" alt="" />
+      <div class="content">
+        <div class="tag">
+        <h3>College Library Website</h3>
+        </div>
+        <div class="desc">
+          <p>This is a College Library Website in which you can keep a record of all the books you have issued. 
+          © 2021 Saurav Mukherjee</p>
+          <div class="btns">
+            <a href="https://sauravmukherjee44.github.io/Aec-Library-Website/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/SauravMukherjee44/Aec-Library-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+   
+    <div class="box tilt">
+      <img draggable="false" src="./assests/images/projects/CodeIN.jpg" alt="" />
+      <div class="content">
+        <div class="tag">
+        <h3>CodeIN Community Website</h3>
+        </div>
+        <div class="desc">
+          <p>This is an Open Source Website for my Community CodeIN Community built using HTML, CSS, JavaScript and Bootstrap.</p>
+          <div class="btns">
+            <a href="https://codeincommunity.tech/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/SauravMukherjee44/CodeIN-Community-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="box tilt">
+      <img draggable="false" src="./assests/images/projects/Netflix.PNG" alt="" />
+      <div class="content">
+        <div class="tag">
+        <h3>Netflix Clone | React-App</h3>
+        </div>
+        <div class="desc">
+          <p>Netflix clone App built with React and Redux. The objective of this project is to practising the concepts of 'React-Hooks', 'Redux-Hooks', react-router, redux-setup.</p>
+          <div class="btns">
+            <a href="https://netflix-clone-saurav.herokuapp.com/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/SauravMukherjee44/Netflix-Clone-PC-App" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    
+<div class="viewall">
+  <a href="/Portfolio-Saurav-Mukherjee/projects" class="btn"><span>View All</span>
+    <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+</section>
+<!-- 项目经历 -->
+
+<!-- 博客 -->
+<section class="blocks" id="blocks">
+
+  <h1 class="heading"><i class="fas fa fa-book"></i> Blocks 
+
+    <p class="qoute">Here is a summary of some of my knowledge and experience.</p>
+
+    <div class="box-container">
+
+    <div class="box">
+        <div class="image">
+        <a href="/block/to_god/index.html">
+        <img draggable="false" src="./m_assests/block/电控培训万字文档.jpg" alt="">
+        
+        </div>
+        <div class="content">
+        <h3>
+          Introduction to Basic Electrical Control Work and a 
+          Detailed Explanation of the Team's Code Framework</h3>
+        <p>A Comprehensive Guide to Programming, Embedded Systems, and Mechatronic Systems
+        </p>
+      </a> 
+        </div>
+    </div>
+
+    <div class="btns">
+      <a href="https://www.bilibili.com/video/BV1Qe4y1n7of/?spm_id_from=333.999.0.0&vd_source=84573173e04f0b3739616dc44db2699a" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+  </div>
+
+    <div class="box">
+      <div class="image">
+        <a href="/block/C++/index.html">
+      <img draggable="false" src="./m_assests/block/C++培训.png" alt="">
+      </div>
+      <div class="content">
+      <h3>Training on basic C++ syntax and programming fundamentals.</h3>
+      <p> The content includes C++ keywords, an introduction to programming, memory management 
+        in C++, and an introduction to embedded systems.
+      </p>
+    </a>
+      </div>
+    </div>
+    
+
+</div>
+</section>
+<!-- 博客 -->
+
+
+<!-- 网站底 -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>SLJ's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website.</p> 
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> project</a>
+
+          <a href="#blocks"><i class="fas fa-chevron-circle-right"></i> block</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          
+          <p> <i class="fas fa-envelope"></i>2384447291@qq.com</p>
+          <p> <i class="fas fa-phone"></i>19972960558</p>
+      </div>
+  </div>
+</section>
+<!-- 网站底 -->
+
+
+<!-- 回滚按钮 -->
+<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- 回滚按钮 -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- 用于简化 JavaScript 编程（所有特效的基石） -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- 打字特效 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- 例子碰撞背景特效 -->
+<script src="./js/particles.min.js"></script>
+<script src="./js/app.js"></script>
+
+<!-- 纽扣晃动特效 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- 时间轴滚动显示特效 -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+<!-- 自己写的脚本 -->
+<script src="./js/script.js"></script>
+
 </body>
 </html>

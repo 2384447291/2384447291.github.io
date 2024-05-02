@@ -1,0 +1,619 @@
+/* 导入外部字体样式表 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+/* 设置网页的样式 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none; border: none;
+  text-transform:capitalize;
+  transition: all .2s linear;
+}
+/* 设置网页整体字体大小为10像素（16 * 0.625 = 10） */
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* 定义整个header内部的元素属性 */
+header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7rem 10%;
+  height: 6.5rem;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(146,161,176,.3);
+}
+section{
+  min-height: 100vh;
+  padding: 2rem 9%;
+}
+header .navbar ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .navbar li{
+  margin-left: 2.5rem;
+}
+header .navbar ul li a{
+  font-size: 1.57rem;
+  color: #0E2431;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.04rem;
+  transition: .2s;
+}
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+  color: #08c7f7;
+  border-bottom: .2rem solid #08c7f7;
+  padding: .5rem 0;
+}
+/* 定义整个header内部的元素属性 */
+
+/*主欢迎界面*/
+.home{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  background-color: #000000;
+}
+.home #particles-js{
+  position: absolute;
+  top: 0;left: 0;
+  height: 100%;
+  width: 100%;
+}
+.home::before{
+  content: '';
+  position: absolute;
+  top: 0;left: 0;
+  height: 100%;
+  width: 100%;
+}
+.home .content{
+  flex: 1 1 40rem;
+  padding-top: 1rem;
+  z-index: 1;
+}
+.home .content h3{
+  font-size: 5rem;
+  font-weight: 800;
+  color: #fff;
+}
+.home .content h3 span{
+  font-size: 5rem;
+  font-weight: 800;
+  color: #08c7f7;
+}
+.home .content p{
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+.home .content p span{
+  font-size: 2.5rem;
+  color: #08c7f7;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+.home .image{
+  flex: 1 1 60rem;
+  z-index: 1;
+}
+.home .image img{
+  width: 60%;
+  margin-left: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.home .image img:hover{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.home .content,
+.home .image {
+  flex: 1; /* 设置为弹性盒子，平均分配剩余空间 */
+  max-width: 50%; /* 最大宽度为父元素的一半 */
+}
+/* 主欢迎界面 */
+
+
+/* 滑动文字 */
+.marquee-section {
+  width: 100%;
+  height: 100vh; /* 这里设置高度为视窗高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url('/m_assests/background.png'); 
+  background-size: cover; /* 确保图片覆盖整个区域 */
+  background-position: center; /* 使图片居中 */
+  background-repeat: no-repeat; /* 避免图片重复 */
+}
+
+.marquee {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track {
+  display: flex;
+  white-space: nowrap;
+  flex-direction: column;
+  width: 100%;
+}
+
+.track.left {
+  left: 0;
+  top: 30%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  transform: translateX(-100%);
+}
+
+.track.right {
+  right: 0;
+  top: 70%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  transform: translateX(100%);
+}
+
+.track span {
+  padding: 1rem 0;
+  font-size: 6em;
+  text-transform: uppercase;
+  width: 600;
+  color: #08c7f7;
+}
+
+/* 滑动文字 */
+
+
+/* 大学四年经历  */
+
+.experience{
+  /* background: #010124; */
+  background:  #000;
+}
+
+.experience .heading {
+    color: rgb(255, 255, 255);
+}
+
+.experience .timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.experience .timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background: linear-gradient(to bottom, #000, #08c7f7);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -2;
+}
+.experience .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+/*circles on timeline*/
+/* 在每个container后面加上这个元素，就是网页中的标志 */
+.experience .container::after {    
+  content: "\f015";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid #08c7f7;
+  top: 15px;
+  z-index: 100;
+  font-size: 1.89rem;
+  text-align: center;
+  font-weight: 600;
+  color:#000000;
+  font-family: 'Font Awesome\ 5 Free';
+}
+.experience .left {
+  left: 0;
+}
+.experience .right {
+  left: 50%;
+}
+/* 在每个content前面绘制小箭头 */
+.experience .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #08c7f7;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #08c7f7;
+}
+/* 在每个content前面绘制小箭头 */
+.experience .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #08c7f7;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #08c7f7 transparent transparent;
+}
+/* 在每个content前面绘制小箭头 */
+.experience .right::after {
+  left: -16px;
+}
+.experience .content {
+  background-color: #08c7f7;
+  position: relative;
+  border-radius: 6px;
+  color: white;
+}
+.experience .content .tag{
+  font-size: 1.3rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+.experience .content .desc{
+  margin-left: 1.5rem;
+  padding-bottom: 1rem;
+}
+.experience .content .desc h3{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.experience .content .desc p{
+  font-size: 1.2rem;
+}
+
+/* 经验的尺寸自适应 */
+@media screen and (max-width: 600px) {
+  .experience{
+    min-height: 80vh;
+  }
+  .experience .timeline{
+    margin-top: 2rem;
+  }
+  .experience .timeline::after {
+  left: 31px;
+  }
+  .experience .container {
+  width: 100%;
+  padding-left: 8rem;
+  padding-right: 2rem;
+  }
+  .experience .container::after {   
+    font-size: 2.2rem;
+  }
+  .experience .container::before {
+  left: 61px;
+  border: medium solid #08c7f7;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #08c7f7 transparent transparent;
+  }
+  .experience .left::after {
+    left: 15px;
+  }
+  .experience .right::after {
+    left: 15px;
+  }
+  .experience .right {
+  left: 0%;
+  }
+  .morebtn {
+    margin-top: 3rem;
+  }
+}
+/* 经验的尺寸自适应 */
+/* 大学四年经历  */
+
+
+/* 项目经历 */
+.work{
+  /* background: #010124; */
+  background: linear-gradient(to bottom, #000, #08c7f7);
+}
+.work h2{
+  color: #fff;
+  padding: 1rem;
+}
+
+.work .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  margin: 2rem;
+}
+.work .box-container .box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(225, 219, 219, 0.895);
+  position: relative;
+  overflow:hidden;
+  height:30rem;
+}
+.work .box-container .box img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+.work .box-container .box .content{
+  height: 100%;
+  width:100%;
+  position: absolute;
+  top:85%; left:0;
+  background:rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+.work .box-container .box .content .tag{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  background: #000;
+}
+.work .box-container .box .content .tag h3{
+  font-size: 2rem;
+  color: white;
+}
+.work .box-container .box:hover .content{
+  top: 25%;
+}
+.work .desc {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.work .desc p{
+  font-size: 1.5rem;
+}
+.work .desc .btns{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+.work .desc .btns .btn{
+  line-height: 0;
+  display: inline;
+  padding: 1.5rem 2.5rem;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgb(12, 12, 12);
+  margin-right: 2rem;
+}
+.work .desc .btns .btn:hover{
+  background: #08c7f7;
+}
+/* 项目经历 */
+
+
+/* 博客 */
+.blocks{
+  background: linear-gradient(to bottom, #08c7f7, #000);
+  min-height: 80vh;
+}
+.blocks .qoute{
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  margin-top: .5rem;
+}
+.blocks .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blocks .box-container .box{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  border-radius: .5rem;
+  box-shadow: .2rem .5rem 1rem rgba(0, 0, 0, .2);
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+  transition: .3s;
+  background: rgb(252, 252, 252);
+}
+.blocks .box-container .box:hover{
+  transform: scale(1.03);
+  box-shadow: 1rem .5rem 1.2rem rgba(0, 0, 0, .3);
+}
+.blocks .box-container .box .image{
+  flex: 1 1 20rem;
+  width: 100%;
+}
+.blocks .box-container .box img{
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.blocks .box-container .box .content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  flex: 1 1 70rem;
+}
+.blocks .box-container .box .content h3{
+  font-size: 2.5rem;
+  color: #000000;
+  padding: .5rem 0;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 1rem;
+}
+.blocks .box-container .box .content p{
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  text-align: left;
+  color: #08c7f7;
+}
+.blocks h4{
+  font-size: 2rem;
+  color: rgb(34, 109, 0);
+  text-align: left;
+  margin: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+.blocks .btns {
+  display: flex;
+  justify-content: center; /* 居中对齐 */
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.blocks .btns .btn {
+  line-height: 0;
+  display: inline-block; /* 使用行内块元素 */
+  padding: 1.5rem 2.5rem;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgb(12, 12, 12);
+  margin-right: 2rem;
+}
+
+.blocks .btns .btn:hover {
+  background: #08c7f7;
+}
+
+/* 博客*/
+
+/* 页底 */
+.footer{
+  min-height: auto;
+  padding-top: 0;
+  background: rgb(0, 0, 0);
+}
+.footer .box-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .box-container .box{
+  flex: 1 1 25rem;
+  margin: 2.5rem;
+}
+.footer .box-container .box h3{
+  font-size: 2.5rem;
+  color: #fff;
+  padding-bottom: 1rem;
+  font-weight: normal;
+}
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  color: #ccc;
+  padding: .7rem 0;
+  text-transform: none;
+}
+.footer .box-container .box p i{
+  padding-right: 1rem;
+  color: #08c7f7;
+}
+.footer .box-container .box a{
+  font-size: 1.5rem;
+  color: rgb(238, 238, 238);
+  padding: .3rem 0;
+  display: block;
+}
+.footer .box-container .box a:hover{
+  color: #08c7f7;
+}
+
+.footer .credit{
+  padding: 1rem 0 0 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Nunito',sans-serif;
+  font-weight: 600;
+  color: #fff;
+  border-top: .1rem solid #fff3;
+}
+.footer .credit a{
+  color: #08c7f7;
+}
+/* 页底 */
+
+/* common media queries starts*/
+@media(max-width:450px){
+  html{
+    font-size: 55%;
+  }
+  body{
+    padding-right: 0;
+  }
+  section{
+    padding: 2rem;
+  }
+}
+/* common media queries ends*/
+
+
+/* 回滚按钮 */
+#scroll-top{
+  position: fixed;
+  top: -140%;
+  right: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  background: #08c7f7;
+  color: rgb(232, 229, 239);
+  border-radius: 50%;
+  transition: 1s linear;
+  z-index: 1000;
+}
+#scroll-top.active{
+  top: calc(100% - 12rem);
+}
+/* 回滚按钮 */

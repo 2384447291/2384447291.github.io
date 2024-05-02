@@ -1,0 +1,60 @@
+[ 
+    {
+        "id": 1,
+        "name": "Introduction to Embedded Programming",
+        "desc": "This PowerPoint provides a detailed overview of the entire hardware architecture from Cortex series CPUs to STM32 chips and development boards. Additionally, it elaborates extensively on the working process of microcontrollers, covering aspects such as data storage, instruction set, data manipulation, and information flow.",
+        "image": "./picture/嵌入式漫谈.png",
+        "links": {
+            "view": "./ppt/rm2022_Lecture0嵌入式编程.pptx"
+        }
+    },
+    {
+        "id": 2,
+        "name": "The work of electronic control",
+        "desc": "The work of a qualified electrical control engineer and the knowledge and skills required for the job are introduced.",
+        "image": "./picture/电控的工作.png",
+        "links": {
+            "view": "./ppt/rm2022_Lecture0电控的工作.pptx"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Programming Fundamentals",
+        "desc": "The basics of programming are introduced, including an explanation of what programming is, and an overview of some fundamental components of C++ for beginners.",
+        "image": "./picture/C++基础.png",
+        "links": {
+            "view": "./ppt/rm2022_Lecture1.pptx"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Data Types",
+        "desc": "The commonly used data types and storage methods in C++ are introduced, along with some encoding knowledge.",
+        "image": "./picture/变量类型.png",
+        "links": {
+            "view": "./ppt/rm2022_Lecture2.pptx"
+        }
+    },
+    
+    {
+        "id": 5,
+        "name": "Keywords",
+        "desc": "The commonly used keywords in C++, their usage, and detailed examples are introduced.",
+        "image": "./picture/关键字.png",
+        "links": {
+            "view": "./ppt/rm2022_Lecture关键字.pptx"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Scope",
+        "desc": "Introduced the important concepts of internal linkage and external linkage in C++, and with the help of these concepts, explained the purpose and difference between definition and declaration.",
+        "image": "./picture/作用域.png",
+        "links": {
+        "view": "./ppt/rm2022_Lecture补充内部链接和外部链接.pptx"
+        }
+    }
+
+    
+    
+]
