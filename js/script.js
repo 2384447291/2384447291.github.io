@@ -38,18 +38,6 @@ $(document).ready(function(){
     })
 });
 
-document.addEventListener('visibilitychange',
-function(){
-    if(document.visibilityState === "visible"){
-        document.title = "Portfolio | Saurav Mukherjee";
-        $("#favicon").attr("href","assests/images/favicon.png");
-    }
-    else {
-        document.title = "Come Back To Portfolio";
-        
-    }
-});
-
 
 // <!-- 打字特效（从外部导入的变量类型Typed） -->
     var typed = new Typed(".typing-text", {
