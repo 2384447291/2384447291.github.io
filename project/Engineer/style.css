@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none; border: none;
+  text-transform:capitalize;
+  transition: all .2s linear;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body{
+  background: #000000;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+*::selection{
+  background: #000;
+  color: #fff;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+html::-webkit-scrollbar-track{
+  background: rgb(235, 202, 245);
+}
+html::-webkit-scrollbar-thumb{
+  background: #420177;
+}
+
+section{
+  min-height: 100vh;
+  padding: 2rem 9%;
+}
+.heading{
+  font-size: 3.5rem;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  text-align: center;
+}
+
+
+/* 归家按钮 */
+.backbtn{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+.backbtn .btn {
+  position: relative;
+  line-height: 0;
+  padding: 1.6rem 3rem;
+  border-radius: .5em;
+  transition: 0.3s;
+  color: #ffffff;
+  border: 2px solid #fff;
+  box-shadow: 0px 2px 4px rgba(48, 68, 247, .3);
+  text-align: center;
+}
+.backbtn .btn span {
+  font-weight: 600;
+  font-size: 1.7rem;
+  font-family: 'Nunito', sans-serif;
+}
+.backbtn .btn i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+.backbtn .btn:hover{
+  background: #ffffff;
+  color: #000;
+}
+.backbtn .btn:hover i {
+  transform: translateX(-8px);
+}
+/* 归家按钮 */
+
+/* 背景设置 */
+.about{
+  background: linear-gradient(to bottom, #08c7f7, #000);
+  margin-top: 5rem;
+}
+/* 背景设置 */
+
+/* 文字格式 */
+.content {
+  display: flex;
+  padding: 3rem;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 4rem;
+}
+.content h3{
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 2.7rem;
+}
+.content .tag{
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.content p{
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-top: 1.4rem;
+  font-family: 'Nunito';
+  font-weight: 600;
+}
+.content .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: 'Nunito';
+  font-weight: 600;
+}
+.content .box-container .box p{
+  text-transform: none;
+  color:#ffffff;
+  font-size: 2.4rem;
+}
+.content .box-container .box p span{
+  color:#08c7f7;
+  font-size: 2.4rem;
+}
+/* 文字格式 */
+
+
+/* 相册 */
+#box{
+  position: relative;
+  display: flex;
+  width: 375px;
+  height: 200px;
+  margin: auto;
+  transform-style: preserve-3d; 
+  transform: rotateX(-10deg);
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+}
+#box > div{
+  transform-style: preserve-3d; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+  box-shadow:0 0 10px #fff;
+  -webkit-box-reflect:below 10px -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.8) 100%);
+}
+#box p{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 1200px;
+  height: 1200px;
+  background: -webkit-radial-gradient(center center,600px 600px,rgba(50,50,50,1),rgba(0,0,0,0));
+  border-radius: 50%;
+  transform: rotateX(90deg) translate3d(-600px,0,-105px);
+}
+/* 相册 */
+
+.resumebtn{
+  margin-top: 6rem;
+}
+.resumebtn .btn {
+  padding: 1.7rem 3rem;
+  border-radius: .5em;
+  transition: 0.3s;
+  color: #08c7f7;
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.6);
+  font-family: 'Nunito', sans-serif;
+}
+.resumebtn .btn span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.resumebtn .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.resumebtn .btn:hover{
+  background: #08c7f7;
+  color: #FFF;
+}
+.resumebtn .btn:hover i {
+  transform: translateX(5px);
+}

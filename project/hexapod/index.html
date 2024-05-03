@@ -7,113 +7,109 @@
     <link rel="stylesheet" href="./style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="/assests/images/favicon.png" type="image/x-png">
-    <title>Projects | Portfolio Saurav Mukherjee</title>
+    <link id='favicon' rel="shortcut icon" href="./logo_black.png" type="image/x-png">
+    <title> SLJ's personal website </title>
 </head>
 <body oncontextmenu="return false">
 
-<!-- navbar starts -->
-<header>
-        <a href="/Portfolio-Saurav-Mukherjee" class="logo"><i class="fab fa-node-js"></i> Saurav</a>
-
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#home">Home</a></li>
-            <li><a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#about">About</a></li>
-            <li><a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#skills">Skills</a></li>
-            <li><a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#education">Education</a></li>
-            <li><a class="active" href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#work">Work</a></li>
-            <li><a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#experience">Experience</a></li>
-            <li><a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#contact">Contact</a></li>
-            </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
-
-<!-- work project section starts -->
-<section class="work" id="work">
-
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-
-  <div class="box-container">
-
-    <!-- <div class="box tilt">
-      <img src="/assests/images/projects/agecalc.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
-        </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div> -->   
-
+<!-- 滚动相册代码 -->
+<section class="about" id="about">
+  <h2 class="heading"><i class="fas fa-user-alt"></i> Mobile-Hexapod-Robot </h2>
+  <div class="resumebtn">
+    <a href="https://www.bilibili.com/video/BV1yg411Q7tu/?vd_source=84573173e04f0b3739616dc44db2699a" class="btn"><span>View Vedio</span>
+        <i class="fas fa-chevron-right"></i>
+    </a>
+</div>
+  <div id="box">
+    <div></div>
+    <div></div>
+    <div></div>
+    <p></p>
   </div>
+  <script>
+  setTimeout(init,100);
+  function init()
+  {
+    var obox = document.getElementById('box'),
+      aDiv = obox.getElementsByTagName('div');
+      
+      for (var i = 0; i < aDiv.length; i++) {
+        aDiv[i].style.background = "url(image/"+(i+1)+".png) center/cover";
+        aDiv[i].style.transform = "rotateY("+(i*120)+"deg) translate3d(0,0,350px)";
+        aDiv[i].style.transition = "transform 1s "+(aDiv.length-i)*0.2+"s";
+      }
+    var sX,
+      sY,
+      nX,
+      nY,
+      desX = 0,
+      desY = 0,
+      tX = 0,
+      tY = 10,
+      index = 0;//滚轮初始值
+    document.onmousedown = function(e){
+      clearInterval(obox.timer);
+      e = e || window.event;
+      var sX = e.clientX,
+        sY = e.clientY;
+        this.onmousemove = function(e){
+          e = e || window.event;
+          var nX = e.clientX,
+            nY = e.clientY;
+             // 当前点的坐标和前一点的坐标差值
+            desX = nX - sX;
+            desY = nY - sY;
+                      tX += desX*0.1; 
+                      tY += desY*0.1;
+  
+            obox.style.transform = "rotateX("+(-tY)+"deg) rotateY("+tX+"deg)";
+            sX = nX;
+            sY = nY;
+        }
+        this.onmouseup = function(){
+          this.onmousemove = this.onmouseup = null;
+          obox.timer = setInterval(function(){
+            desX *= 0.95;
+            desY *= 0.95;
+            tX += desX*0.1;
+            tY += desY*0.1;
+            obox.style.transform = "rotateX("+(-tY)+"deg) rotateY("+tX+"deg)";
+            if (Math.abs(desX)<0.5 && Math.abs(desY)<0.5) {
+              clearInterval(obox.timer);
+            }
+          },13);
+        }
+      return false;
+    }
+  }
+  </script>
+  <!-- 滚动相册代码 -->
+
+
+  <!-- desc代码 -->
+  <div class="content">
+      <h3>Mobile-Hexapod-Robot</h3>
+      <span class="tag">
+        This project is for a mobile hexapod robot, which achieves basic movements (forward, backward, left, right & rotation) 
+        and automatic posture adjustment function (self-stabilization on inclined surfaces). 
+        And the entire project is <a href="https://github.com/2384447291/Mobile-Hexapod-Robot-LANGZHU">open-source.</a> </span>
+      
+      <div class="box-container">
+          <div class="box">
+            <p><span> Technology stack: </span> Motor driver programming, electromechanical system design (Python), kinematic simulation (Matlab)</p>
+            <p><span> ability : </span> Hexapod robot gait, robot modeling</p>
+          </div>
+      </div>
+  </div>
+  <!-- desc代码 -->
 
   <div class="backbtn">
-    <a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#work" class="btn">
+    <a href="https://2384447291.github.io/#work" class="btn">
         <i class="fas fa-arrow-left"></i>
         <span>Back to Home</span>
   </a>
   </div>
-
 </section>
-<!-- work project section ends -->
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Saurav's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Please wait for a while all major projects will be listed soon. Till then keep visiting. Connect with me over live chat!</p>
-      </div>
-
-      <div class="box">
-          <h3>quick links</h3>
-          <a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-          <a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
-
-      <div class="box">
-        <h3>contact info</h3>
-        
-        <p> <i class="fas fa-envelope"></i>mesouravofficial@gmail.com</p>
-        <p> <i class="fas fa-map-marked-alt"></i>Asansol, India-713305</p>
-        <div class="share">
-
-            <a href="https://www.linkedin.com/in/sauravmukherjee44/" class="fab fa-linkedin" target="_blank"></a>
-            <a href="https://github.com/SauravMukherjee44" class="fab fa-github" target="_blank"></a>
-            <a href="mailto:mesouravofficial@gmail.com" class="fas fa-envelope" target="_blank"></a>
-            <a href="https://twitter.com/mesourav44" class="fab fa-twitter" target="_blank"></a>
-            <a href="https://www.instagram.com/mesouravofficial/" class="fab fa-instagram" target="_blank"></a>
-            <a href="https://www.youtube.com/c/SauravMukherjee44/featured" class="fab fa-youtube" target="_blank"></a>
-        </div>
-    </div>
-</div>
-
-
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://sauravmukherjee.bio.link/"> Saurav Mukherjee</a></h1>
-
-</section>
-<!-- footer section ends -->
-
-
-<!-- scroll top btn -->
-<a href="https://sauravmukherjee44.github.io/Portfolio-Saurav-Mukherjee/#work" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
-
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
 <!-- jquery cdn -->

@@ -157,6 +157,7 @@ header .navbar ul li a:hover{
 }
 
 .track {
+  font-family:STHupo;
   display: flex;
   white-space: nowrap;
   flex-direction: column;
@@ -361,7 +362,7 @@ header .navbar ul li a:hover{
   margin: 2rem;
 }
 .work .box-container .box{
-  flex:1 1 30rem;
+  flex:1 1 50rem;
   border-radius: .5rem;
   box-shadow: 0 .5rem 1rem rgba(225, 219, 219, 0.895);
   position: relative;
@@ -407,10 +408,11 @@ header .navbar ul li a:hover{
 }
 .work .desc p{
   font-size: 1.5rem;
+  color: black;
 }
 .work .desc .btns{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   margin-top: 2rem;
 }
