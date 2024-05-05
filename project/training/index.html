@@ -16,7 +16,7 @@
 <section class="about" id="about">
   <h2 class="heading"><i class="fas fa-user-alt"></i> Integrated electromechanical training </h2>
   <div class="resumebtn">
-    <a href="https://www.bilibili.com/video/BV1Qe4y1n7of/" class="btn"><span>View Vedio</span>
+    <a href="https://www.bilibili.com/video/BV1Qe4y1n7of/" class="btn"><span  id = "id_View_Vedio">View Vedio</span>
         <i class="fas fa-chevron-right"></i>
     </a>
 </div>
@@ -87,23 +87,33 @@
   </script>
   <!-- 滚动相册代码 -->
 
+  <div class="btns">
+    <button class="btn" onclick="viewFunction()" id="id_switchBtn">
+        English
+    </button>
+  </div>
 
   <!-- desc代码 -->
   <div class="content">
-      <h3>Integrated electromechanical training</h3>
-      <span class="tag">In the third year, I took on the role of electrical control team leader. In order to conduct training for new members 
+      <h3 id = "id_content_title">Integrated electromechanical training</h3>
+      <span class="tag" id = "id_content_content_1">In the third year, I took on the role of electrical control team leader. In order to conduct training for new members 
         and to organize my thoughts, I compiled the knowledge and experience I had accumulated over the past three years into a document 
         exceeding 100,000 words, and created a PowerPoint presentation spanning over 400 slides. The entire training lasted for a period 
         of two months. </span>
-      <p>
+      <p id = "id_content_content_2">
         The training content includes electromechanical system design, STM32 programming, embedded systems architecture, basic syntax of C++,
          fundamental electromechanical system knowledge, and in-depth explanation of the team's code framework.The detailed documents and PowerPoint presentations 
-         are available on the <a href="https://2384447291.github.io/#blocks">blog</a> of this website.
-       </p>
+         are available on the blog of this website.</p>
+      <div class="resumebtn">
+          <a href="https://2384447291.github.io/#blocks" class="btn"><span id = "id_Blog">Blog</span>
+              <i class="fas fa-chevron-right"></i>
+          </a>
+      </div>
+       
       
       <div class="box-container">
           <div class="box">
-            <p><span> ability : </span> Document organization skills</p>
+            <span id = "id_Abl_head"> ability : </span>  <p id = "id_Abl_content"> Document organization skills</p>
           </div>
       </div>
   </div>
@@ -112,7 +122,7 @@
   <div class="backbtn">
     <a href="https://2384447291.github.io/#work" class="btn">
         <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
+        <span id = "id_content_BTH">Back to Home</span>
   </a>
   </div>
 </section>

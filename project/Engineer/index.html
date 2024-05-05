@@ -85,58 +85,66 @@
   </script>
   <!-- 滚动相册代码 -->
 
+  <div class="btns">
+    <button class="btn" onclick="viewFunction()" id="id_switchBtn">
+        English
+    </button>
+  </div>
 
   <!-- desc代码 -->
   <div class="content">
-      <h3>"Engineering" Robot</h3>
-      <span class="tag">
+      <h3 id = "id_content_title">"Engineering" Robot</h3>
+      <span class="tag" id = "id_content_content_1">
         In the RoboMaster competition, the engineering robot is a crucial robot. Its main function is to transport objects. 
         This robot needs to achieve a large working space extension within a limited volume while ensuring that its end effector 
         can accurately complete the picking task. Moreover, it needs to accurately place the picked items into the six-degree-of-freedom 
         target basket.</span>
-      <p>
+      <p id = "id_content_content_2">
         The challenge of engineering robots lies in circuit design, such as arranging enough drivers in limited space and protecting wires under
          high degrees of freedom. Additionally, due to the high degrees of freedom, it's necessary to design automation to assist operators in 
          completing tasks effectively.
       </p>
 
-      <p>
+      <p id = "id_content_content_3">
         During my three years of participation in the competition, I primarily handled this robot, including circuit design and control code 
         development. Over the past three years, our team has produced a total of four engineering robots, comprising two gantries with 
         pneumatic-electric hybrid drives and two 7-axis robotic arms. 
       </p>
 
-      <p>
+      <p id = "id_content_content_4">
         For all four robots, my specific tasks included overall design (PCB design, wire layout), programming (driver sensor low-level driving,
          robot controller, automation process design, human-machine interaction design), and subsequent maintenance.
         </p>  
-        <p>
-         <a href="./技术报告.pdf">The entire workflow:</a>
+        <p id = "id_content_content_5">
+         <a href="./技术报告.pdf" id = "id_content_content_6">The entire workflow:</a>
          First, design the corresponding configuration based on the rules of the year (including the number of rotating joints and moving joints), 
          then select motors according to the corresponding joint requirements (torque, speed, load), and write corresponding drivers. Next, 
          conduct kinematics and dynamics simulations of the envisioned configuration and deploy the corresponding algorithms to embedded solutions.
           After the robot manufacturing is completed, design the circuit layout for the robot. After completing the basic functions, communicate with 
           the operator and conduct repeated tests to determine the optimal automation and control schemes.
       </p>     
-      <p>
+      <p id = "id_content_content_7">
         For the 7-axis robotic arm, a T265 camera was integrated to obtain camera coordinate transformations. By mapping the 
         robotic arm coordinates to the camera coordinates, effective human-machine interaction was achieved. 
-        Additionally, visual recognition was utilized to identify the pose of the target basket, assisting in operations.
-      <video width="800" height = "600"src="./自定义.mp4" playsinline autoplay="false" controls controlslist="nodownload"></video>
-      </p>        
+        Additionally, visual recognition was utilized to identify the pose of the target basket, assisting in operations.</p> 
+      <p>
+      <video width="800" height = "600"src="./enginner.mp4" playsinline autoplay="false" controls controlslist="nodownload"></video>
+      </p>      
+      <p>
+        <video width="800" height = "600"src="./自定义.mp4" playsinline autoplay="false" controls controlslist="nodownload"></video>
+        </p>    
       <div class="box-container">
           <div class="box">
-            <p><span> Technology stack: </span> Robotics Toolbox (Matlab programming), Embedded Development (STM32 series software support, Keil, FreeMASTER, CubeMonitor, CubeMX),
+            <span id = "id_Tec_head"> Technology stack: </span> <p id = "id_Tec_content">Robotics Toolbox (Matlab programming), Embedded Development (STM32 series software support, Keil, FreeMASTER, CubeMonitor, CubeMX),
                T265 Driver (Basic ROS Development), PCB Design (Iceda), Conventional Robot Overall Drive (Upper-Lower Computer Communication, Robot Operating
                 System), Conventional Robot Hardware System Design (Wiring, Circuit Boards), Conventional Robot System Control Algorithms (PID, LQR, Kalman Filtering, 
-                Modern Control Theory, Classical Control Theory)
-              machine learning algorithm (photometric stereo algorithm).</p>
-            <p><span> ability : </span> Robotics (Robot Kinematics, Robot Dynamics); Robotic Arm Design; Overall Robot Design</p>
-            <p><span> Achievements : </span> Invited to present the project at the DJI Young Engineers Summit, winner of the first prize in the 2023 National Robotics Competition.</p>
+                Modern Control Theory, Classical Control Theory).</p>
+            <span id = "id_Abl_head"> ability : </span> <p id = "id_Abl_content">Robotics (Robot Kinematics, Robot Dynamics); Robotic Arm Design; Overall Robot Design</p>
+            <span id = "id_Ach_head"> Achievements : </span><p id = "id_Ach_content">Invited to present the project at the DJI Young Engineers Summit, winner of the first prize in the 2023 National Robotics Competition, ROBOMASTER Multiple Awards.</p>
           </div>
       </div>
       <div class="resumebtn">
-        <a href="https://www.bilibili.com/video/BV1sP411s7hA/" class="btn"><span>View vedio</span>
+        <a href="https://www.bilibili.com/video/BV1sP411s7hA/" class="btn"><span id = "id_content_view_vedio">View vedio</span>
             <i class="fas fa-chevron-right"></i>
         </a>
     </div>
@@ -148,7 +156,7 @@
   <div class="backbtn">
     <a href="https://2384447291.github.io/#work" class="btn">
         <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
+        <span id = "id_content_BTH">Back to Home</span>
   </a>
   </div>
 </section>

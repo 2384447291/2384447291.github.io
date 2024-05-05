@@ -84,42 +84,46 @@
   </script>
   <!-- 滚动相册代码 -->
 
+  <div class="btns">
+    <button class="btn" onclick="viewFunction()" id="id_switchBtn">
+        English
+    </button>
+  </div>
 
   <!-- desc代码 -->
   <div class="content">
-      <h3>Robomaster</h3>
-      <span class="tag">
+      <h3  id = "id_content_title">Robomaster</h3>
+      <span class="tag"  id = "id_content_content_1">
         RoboMaster, a national university-level robotics competition, is jointly organized by the Communist Youth League Central Committee, 
         the National Student Union, and the Shenzhen Municipal People's Government, with DJI as the host. It is a leading-edge robotics competition. 
         The RoboMaster University Series (RMU), initiated by DJI, is one of the events under the National College Student Robotics Competition. 
-        It serves as a platform for global technology enthusiasts to engage in robotics competition and academic exchange. </span>
-      <p>
-
-        <p>During my three years of "working life" in the team, I have developed a variety of skills:</p><p>
-        1.Proficiency in PCB design, with the ability to read electronic component datasheets and PCB schematics fluently.</p><p>
-        2.Mastery of common equipment such as logic analyzers, oscilloscopes, and multimeters for testing purposes.</p><p>
-        3.Proficient in using software like Altium Designer for circuit design and embedded system development.</p><p>
+        It serves as a platform for global technology enthusiasts to engage in robotics competition and academic exchange. 
+      </span>
+        <p id = "id_content_content_2">During my three years of "working life" in the team, I have developed a variety of skills:</p><p id = "id_content_content_3">
+        1.Proficiency in PCB design, with the ability to read electronic component datasheets and PCB schematics fluently.</p><p id = "id_content_content_4">
+        2.Mastery of common equipment such as logic analyzers, oscilloscopes, and multimeters for testing purposes.</p><p id = "id_content_content_5">
+        3.Proficient in using software like Altium Designer for circuit design and embedded system development.</p><p id = "id_content_content_6">
         4.In-depth understanding of embedded systems, particularly on the STM32 platform and its development software including 
-        Freemaster, STM32CubeMX, and STM32CubeMonitor. I have extensive experience in STM32 development, covering GPIO, DMA, CAN, UART, timers, and more.</p><p>
+        Freemaster, STM32CubeMX, and STM32CubeMonitor. I have extensive experience in STM32 development, covering GPIO, DMA, CAN, UART, timers, and more.</p><p id = "id_content_content_7">
         5.Familiarity with basic electromechanical development knowledge, such as UART, CAN communication protocols, motor types, 
-        sensor types, and their drivers.</p><p>
+        sensor types, and their drivers.</p><p id = "id_content_content_8">
         6.Completed multiple electromechanical integrated system designs, including six-axis robots, pneumatic-electric hybrid
-         gantry systems, launch mechanisms, and mobile chassis.</p><p>
+         gantry systems, launch mechanisms, and mobile chassis.</p><p id = "id_content_content_9">
         7.Understanding robot operating systems, familiar with a set of internally developed robot operating systems within 
         the team, including upper-lower computer communication, program scheduling, memory allocation, and simple reflection 
-        based on interrupt mechanisms.</p><p>
-        8.Familiar with robot development processes, proficient in robot development debugging (LQR, PID, Kalman filtering, etc.).</p><p>
-        9.Familiar with robot modeling (robot dynamics based on MATLAB toolboxes, robot kinematics development).</p><p>
-        10.Familiar with robot systems, capable of selecting suitable robot configurations and appropriate drivers (motor load verification), and choosing sensor types based on operational conditions.</p><p>
+        based on interrupt mechanisms.</p><p id = "id_content_content_10">
+        8.Familiar with robot development processes, proficient in robot development debugging (LQR, PID, Kalman filtering, etc.).</p><p id = "id_content_content_11">
+        9.Familiar with robot modeling (robot dynamics based on MATLAB toolboxes, robot kinematics development).</p><p id = "id_content_content_12">
+        10.Familiar with robot systems, capable of selecting suitable robot configurations and appropriate drivers (motor load verification), and choosing sensor types based on operational conditions.</p><p id = "id_content_content_13">
         11.Capable of approaching robotics problems from the perspective of both modern control theory (time-domain, state equations, LQR, Kalman filtering) and traditional control theory(frequency-domain
-        , MATLAB-assisted debugging of PID, characteristic roots).</p><p>
+        , MATLAB-assisted debugging of PID, characteristic roots).</p>
          
       
       <div class="box-container">
           <div class="box">
-            <p><span> Technology stack: </span> As Talked above</p>
-            <p><span> ability : </span> As Talked above</p>
-            <p><span> Achievements : </span> Participate in over 10 large-scale competitions, 
+            <span id = "id_Tec_head"> Technology stack: </span> <p id = "id_Tec_content">As Talked above</p>
+            <span id = "id_Abl_head"> ability : </span> <p id = "id_Abl_content">As Talked above</p>
+            <span id = "id_Ach_head"> Achievements : </span> <p id = "id_Ach_content">Participate in over 10 large-scale competitions, 
               overseeing the circuit design and overall control of multiple robots. I was honored with 3 national-level awards 
               and 4 provincial-level awards</p>
           </div>
@@ -130,7 +134,7 @@
   <div class="backbtn">
     <a href="https://2384447291.github.io/#work" class="btn">
         <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
+        <span id = "id_content_BTH">Back to Home</span>
   </a>
   </div>
 </section>

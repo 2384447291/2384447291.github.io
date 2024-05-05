@@ -16,7 +16,7 @@
 <section class="about" id="about">
   <h2 class="heading"><i class="fas fa-user-alt"></i> IrisTac </h2>
   <div class="resumebtn">
-    <a href="./Papper of EECR2024.pdf" class="btn"><span>View Papper</span>
+    <a href="./Papper of EECR2024.pdf" class="btn"><span id = "id_View_Papper">View Papper</span>
         <i class="fas fa-chevron-right"></i>
     </a>
 </div>
@@ -87,15 +87,21 @@
   </script>
   <!-- 滚动相册代码 -->
 
+  <div class="btns">
+    <button class="btn" onclick="viewFunction()" id="id_switchBtn">
+        English
+    </button>
+  </div>
 
   <!-- desc代码 -->
   <div class="content">
-      <h3>IrisTac</h3>
-      <span class="tag">
+      <h3 id = "id_content_title">IrisTac</h3>
+      <span class="tag" id = "id_content_content_1">
         IrisTac has proposed a novel tactile sensor design, which utilizes a multicolored LED ring to 
         simulate various lighting environments. This design employs a single sensor platform to control variables
-        and investigate the impact of lighting conditions on surface reconstruction of objects. </span>
-      <p>
+        and investigate the impact of lighting conditions on surface reconstruction of objects. 
+      </span>
+      <p id = "id_content_content_2">
         In this study, I was involved in the entire process from initial research and idea implementation 
         to experimental validation and paper writing. Starting with limited knowledge, I conducted extensive 
         literature review to gradually identify innovative points. Subsequently, I was responsible for building the 
@@ -105,11 +111,11 @@
       
       <div class="box-container">
           <div class="box">
-            <p><span> Technology stack: </span> Building the electromechanical system of the sensor: PCB design (Iceda), 
+            <span id = "id_Tec_head"> Technology stack: </span> <p id = "id_Tec_content">Building the electromechanical system of the sensor: PCB design (Iceda), 
               sensor enclosure design (Fusion360), basic image processing (OpenCV), 
               machine learning algorithm (photometric stereo algorithm).</p>
-            <p><span> ability : </span> Basic knowledge of tactile sensors; Ability to read and analyze paper; Understanding the standard research process</p>
-            <p><span> Achievements : </span> Publishing a paper at an international conference as a secondary author</p>
+            <span id = "id_Abl_head"> ability : </span> <p id = "id_Abl_content">Basic knowledge of tactile sensors; Ability to read and analyze paper; Understanding the standard research process</p>
+            <span id = "id_Ach_head"> Achievements : </span> <p id = "id_Ach_content">Publishing a paper at an international conference as a secondary author</p>
           </div>
       </div>
   </div>
@@ -118,7 +124,7 @@
   <div class="backbtn">
     <a href="https://2384447291.github.io/#work" class="btn">
         <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
+        <span id = "id_content_BTH">Back to Home</span>
   </a>
   </div>
 </section>

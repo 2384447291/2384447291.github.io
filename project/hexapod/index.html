@@ -16,7 +16,7 @@
 <section class="about" id="about">
   <h2 class="heading"><i class="fas fa-user-alt"></i> Mobile-Hexapod-Robot </h2>
   <div class="resumebtn">
-    <a href="https://www.bilibili.com/video/BV1yg411Q7tu/?vd_source=84573173e04f0b3739616dc44db2699a" class="btn"><span>View Vedio</span>
+    <a href="https://www.bilibili.com/video/BV1yg411Q7tu/?vd_source=84573173e04f0b3739616dc44db2699a" class="btn"><span id = "id_View_Vedio">View Vedio</span>
         <i class="fas fa-chevron-right"></i>
     </a>
 </div>
@@ -84,20 +84,28 @@
   }
   </script>
   <!-- 滚动相册代码 -->
-
+  
+  <div class="btns">
+    <button class="btn" onclick="viewFunction()" id="id_switchBtn">
+        English
+    </button>
+  </div>
 
   <!-- desc代码 -->
   <div class="content">
-      <h3>Mobile-Hexapod-Robot</h3>
-      <span class="tag">
+      <h3 id = "id_content_title">Mobile-Hexapod-Robot</h3>
+      <span class="tag" id = "id_content_content_1">
         This project is for a mobile hexapod robot, which achieves basic movements (forward, backward, left, right & rotation) 
         and automatic posture adjustment function (self-stabilization on inclined surfaces). 
-        And the entire project is <a href="https://github.com/2384447291/Mobile-Hexapod-Robot-LANGZHU">open-source.</a> </span>
-      
+        And the entire project is open-source.</span>
+        <div class="resumebtn">
+          <a href="https://github.com/2384447291/Mobile-Hexapod-Robot-LANGZHU" class="btn"><span id = "id_content_link">github link</span>
+          </a>
+      </div>
       <div class="box-container">
           <div class="box">
-            <p><span> Technology stack: </span> Motor driver programming, electromechanical system design (Python), kinematic simulation (Matlab)</p>
-            <p><span> ability : </span> Hexapod robot gait, robot modeling</p>
+            <span id = "id_Tec_head"> Technology stack: </span>  <p id = "id_Tec_content"> Motor driver programming, electromechanical system design (Python), kinematic simulation (Matlab)</p>
+            <span id = "id_Abl_head"> ability : </span> <p id = "id_Abl_content"> Hexapod robot gait, robot modeling</p>
           </div>
       </div>
   </div>
@@ -106,7 +114,7 @@
   <div class="backbtn">
     <a href="https://2384447291.github.io/#work" class="btn">
         <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
+        <span id = "id_content_BTH">Back to Home</span>
   </a>
   </div>
 </section>
